@@ -1,47 +1,194 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой интернет-магазин</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            text-align: center;
-            padding: 50px;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vazgen Store</title>
 
-        h1 {
-            color: #2c3e50;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
 
-        p {
-            font-size: 20px;
-        }
+body{
+    background:#f5f5f5;
+}
 
-        button {
-            padding: 12px 25px;
-            font-size: 18px;
-            background: #007bff;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-        }
+header{
+    background:#111;
+    color:white;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
 
-        button:hover {
-            background: #0056b3;
-        }
-    </style>
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+}
+
+.hero{
+    height:400px;
+    background:linear-gradient(135deg,#0077ff,#00c6ff);
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero h1{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:22px;
+}
+
+.products{
+    max-width:1200px;
+    margin:auto;
+    padding:50px 20px;
+}
+
+.products h2{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card h3{
+    padding:15px;
+}
+
+.price{
+    color:#0077ff;
+    font-size:22px;
+    padding:0 15px;
+}
+
+button{
+    width:90%;
+    margin:15px;
+    padding:12px;
+    border:none;
+    background:#0077ff;
+    color:white;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#005ed8;
+}
+
+footer{
+    margin-top:50px;
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+</style>
+
 </head>
 <body>
 
+<header>
+
+<div class="logo">
+Vazgen Store
+</div>
+
+<nav>
+<a href="#">Главная</a>
+<a href="#">Каталог</a>
+<a href="#">Контакты</a>
+</nav>
+
+</header>
+
+<section class="hero">
 <h1>Добро пожаловать!</h1>
+<p>Лучший интернет-магазин</p>
+</section>
 
-<p>Это мой первый сайт.</p>
+<section class="products">
 
-<button onclick="alert('Спасибо за посещение!')">Нажми меня</button>
+<h2>Популярные товары</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://picsum.photos/300/220?1">
+<h3>Ноутбук</h3>
+<p class="price">3500 ₾</p>
+<button>Купить</button>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300/220?2">
+<h3>Смартфон</h3>
+<p class="price">2200 ₾</p>
+<button>Купить</button>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300/220?3">
+<h3>Наушники</h3>
+<p class="price">350 ₾</p>
+<button>Купить</button>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300/220?4">
+<h3>Смарт-часы</h3>
+<p class="price">650 ₾</p>
+<button>Купить</button>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Vazgen Store
+</footer>
 
 </body>
 </html>
